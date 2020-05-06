@@ -4,31 +4,28 @@ html{
     font-size: 62.5%; /*Rem ratio 10px --> 1rem*/
 }
 body{
-    font-family: 'Lato', sans-serif;
+    font-family:'Open Sans', sans-serif;
     font-size: 1.6rem;
-    line-height: 2;
+}
+/*Globals*/
+.container{
+    width: calc(93.33%);
 }
 
 .barra{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 226px;
-}
-nav{
-    display: flex;
-    justify-content: space-around;
-    padding: 1rem;
-    align-items: center;
-    width: 656px;
+    height: 22.6rem;
+    padding-top: 6.4rem;
+    /*width: 93.33%;*/
 }
 
 .logo img{
     width: 5rem;
-    padding-left: 2rem;
 }
 
-a{
+.nav-bar a{
     text-decoration: none;
     font-size: 2.2rem;
     color: #3B3B3B;
