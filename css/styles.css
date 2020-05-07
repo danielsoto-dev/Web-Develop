@@ -1,18 +1,43 @@
-html{
+html {
     padding: 0;
-    margin:0;
-    font-size: 62.5%; /*Rem ratio 10px --> 1rem*/
-}
-body{
-    font-family:'Open Sans', sans-serif;
-    font-size: 1.6rem;
-}
-/*Globals*/
-.container{
-    width: calc(93.33%);
+    margin: 0;
+    font-size: 62.5%;
+    background-color:#9c9c9c;
+    /*Rem ratio 10px --> 1rem*/
+    color: #161616;
 }
 
-.barra{
+body {
+    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Expletus Sans', cursive;*/
+    font-size: 1.6rem;
+}
+
+/*Globals*/
+.container {
+    /*width: ;*/
+    max-width: calc(93.33%);
+    margin: 0 auto;
+}
+
+.main-content {
+    font-family: 'Expletus Sans', cursive;
+    /*display: flex;*/
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: 99.8rem;
+}
+
+.main-content h1 {
+    font-size: 10rem;
+}
+
+h1 span {
+    /*color: white;*/
+}
+
+.barra {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,19 +46,44 @@ body{
     /*width: 93.33%;*/
 }
 
-.logo img{
-    width: 5rem;
+.logo img {
+    width: 10rem;
 }
 
-.nav-bar a{
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 59.2rem;
+}
+
+.nav-bar a {
     text-decoration: none;
-    font-size: 2.2rem;
-    color: #3B3B3B;
+    font-weight: bold;
+    font-size: 3.3rem;
+    color: #161616;
+}
+.img-brackets{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-myWork {
+    font-family: 'Expletus Sans', cursive;
+    font-weight: 600;
+    font-size: 3rem;
+    padding: 2.15rem 2.4rem;
+    border: none;
+    margin: 0;
+    width: auto;
+    outline: none;
+    border-radius: 5rem;
+    
 }
 
 .centrar-texto {
     text-align: center;
 }
+
 .d-block {
-    display: block!important;
+    display: block !important;
 }
