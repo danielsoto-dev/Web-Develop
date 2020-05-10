@@ -6,7 +6,9 @@ html {
     /*Rem ratio 10px --> 1rem*/
     color: #161616;
 }
-
+h1{
+    margin: 0;
+}
 body {
     font-family: 'Open Sans', sans-serif;
     /*font-family: 'Expletus Sans', cursive;*/
@@ -14,19 +16,26 @@ body {
 }
 
 /*Globals*/
-.container {
+.header-container {
     /*width: ;*/
     max-width: calc(93.33%);
     margin: 0 auto;
 }
 
+.main-container{
+    max-width: calc(51.98%);/*Not sure*/
+    margin: 0 auto;
+    text-align: center;
+}
+
 .main-content {
     font-family: 'Expletus Sans', cursive;
-    /*display: flex;*/
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     margin: 0 auto;
-    width: 99.8rem;
+    height: 49rem;
+    align-items: center;
 }
 
 .main-content h1 {
@@ -73,7 +82,7 @@ h1 span {
     font-size: 3rem;
     padding: 2.15rem 2.4rem;
     border: none;
-    margin: 0;
+    margin: 0 auto;
     width: auto;
     outline: none;
     border-radius: 5rem;
@@ -87,3 +96,4 @@ h1 span {
 .d-block {
     display: block !important;
 }
+
