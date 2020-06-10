@@ -3,7 +3,7 @@ html {
     padding: 0;
     margin: 0;
     font-size: 62.5%;
-    background-color: #5588FE;
+    background-color: #ffffff;
     /*Rem ratio 10px --> 1rem*/
     color: #161616;
     box-sizing: border-box;
@@ -46,15 +46,22 @@ h4 {
 
 /*! ********* Reusable End*********  */
 
+.box{
+    background-color: #5588FE;
+    position: absolute;
+    top: 6.4rem;
+    bottom: 6.4rem;
+    left: 6.4rem;
+    right: 50%;
+    z-index: -1;
+}
 
 
 /* ********* Header *********  */
 
-
-
 .header-container {
     /*width: ;*/
-    max-width: calc(93.33%);
+    max-width: calc(87.40%);
     margin: 0 auto;
 }
 
@@ -88,8 +95,6 @@ h4 {
     
 
 }
-
-
 .logo {
     display: inline-block;
     text-decoration: none;
@@ -108,7 +113,8 @@ h4 {
     justify-content: space-between;
     align-items: center;
     height: 22.6rem;
-    padding-top: 6.4rem;
+    padding-top: 12.7rem;
+    margin-bottom:5rem;
     /*width: 93.33%;*/
 }
 
@@ -128,6 +134,7 @@ h4 {
 }
 
 .nav-bar a {
+    font-family: 'Expletus Sans', cursive;
     text-decoration: none;
     font-weight: bold;
     font-size: 3.3rem;
@@ -136,7 +143,8 @@ h4 {
 }
 
 .nav-bar a:hover {
-    color: white;
+    color: #5588FE;
+    font-size: 3.5rem;
 }
 
 /*! ********* Header End*********  */
@@ -149,6 +157,7 @@ h4 {
 
 .main-content {
     font-family: 'Expletus Sans', cursive;
+    font-weight: bold;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -157,14 +166,19 @@ h4 {
     align-items: center;
 
 }
-
-.main-content h1 {
-    font-size: 10rem;
+.main-text-bar{
+    justify-content: space-evenly;
+    align-self: center;
+    width: 100%;
+}
+.main-content{
+    font-size: 8rem;
 }
 
-h1 span {
+.main-text-bar span {
     color: white;
 }
+
 
 .img-brackets {
     display: block;
