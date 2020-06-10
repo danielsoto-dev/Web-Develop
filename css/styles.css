@@ -1,11 +1,17 @@
+/* ********* Variables *********  */
+:root{
+    --main-font: 'Expletus Sans', cursive;
+    --secondary-font:  'Open Sans', sans-serif;
+    --grey-color: #161616;
+}
+/*! ********* Variables End *********  */
 /* ********* Globals *********  */
 html {
     padding: 0;
     margin: 0;
     font-size: 62.5%;
-    background-color: #ffffff;
     /*Rem ratio 10px --> 1rem*/
-    color: #161616;
+    color: var(--grey-color);
     box-sizing: border-box;
 }
 
@@ -16,7 +22,7 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family:var(--secondary-font);
     /*font-family: 'Expletus Sans', cursive;*/
     font-size: 1.6rem;
 }
@@ -47,7 +53,8 @@ h4 {
 /*! ********* Reusable End*********  */
 
 .box{
-    background-color: #5588FE;
+    /*rgb(10, 25, 47)*/
+    background-color:  var(--grey-color);
     position: absolute;
     top: 6.4rem;
     bottom: 6.4rem;
@@ -98,7 +105,7 @@ h4 {
 .logo {
     display: inline-block;
     text-decoration: none;
-    font-family: 'Expletus Sans', cursive;
+    font-family: var(--main-font);
     font-weight: 900;
     font-size: 8.5rem;
     color: #ffffff;
@@ -112,9 +119,7 @@ h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 22.6rem;
-    padding-top: 12.7rem;
-    margin-bottom:5rem;
+    padding-top: 12rem;
     /*width: 93.33%;*/
 }
 
@@ -134,19 +139,35 @@ h4 {
 }
 
 .nav-bar a {
-    font-family: 'Expletus Sans', cursive;
+    font-family: var(--main-font);
     text-decoration: none;
     font-weight: bold;
     font-size: 3.3rem;
-    color: #161616;
-    transition: 0.3s;
+    color:  var(--grey-color);
+    position: relative;
+    transition: all 0.4s ease;
+}
+.nav-bar a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: var(--grey-color);
+    width: 0;
+    left: 50%;
+    bottom: -1rem;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 
 }
 
+.nav-bar a:hover:after {
+    width: 100%;
+  }
 .nav-bar a:hover {
-    color: #5588FE;
-    font-size: 3.5rem;
+    color: var(--grey-color);
+    font-size: 3.4rem;
 }
-
 /*! ********* Header End*********  */
 .main-container {
     max-width: calc(51.98%);
@@ -156,7 +177,7 @@ h4 {
 }
 
 .main-content {
-    font-family: 'Expletus Sans', cursive;
+    font-family: var(--main-font);
     font-weight: bold;
     display: flex;
     flex-direction: column;
@@ -179,8 +200,12 @@ h4 {
     color: white;
 }
 
+.brackets-svg{
+    max-width: 15rem;
+}
 
-.img-brackets {
+.img{
+    width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -189,7 +214,7 @@ h4 {
     cursor: pointer;
 }
 .btn-myWork {
-    font-family: 'Expletus Sans', cursive;
+    font-family: var(--main-font);
     font-weight: 600;
     font-size: 3rem;
     padding: 2.15rem 2.4rem;
