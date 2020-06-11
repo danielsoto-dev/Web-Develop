@@ -36,7 +36,6 @@ h4 {
 
 /*! ********* Globals End*********  */
 
-
 /* ********* Reusable *********  */
 .centrar-texto {
     text-align: center;
@@ -53,7 +52,6 @@ h4 {
 /*! ********* Reusable End*********  */
 
 .box{
-    /*rgb(10, 25, 47)*/
     background-color:  var(--grey-color);
     position: absolute;
     top: 6.4rem;
@@ -88,20 +86,6 @@ h4 {
     animation: orbit 3s linear infinite;
 }
 
-@keyframes orbit {
-    0% {
-        transform: scale(0.95) rotate(0deg);
-    }
-    50%{
-        transform: scale(1) rotate(15deg);
-    }
-    100%{
-        transform: scale(0.95) rotate(30deg);
-    }
-    
-    
-
-}
 .logo {
     display: inline-block;
     text-decoration: none;
@@ -113,7 +97,18 @@ h4 {
     line-height: 9rem;
 }
 
+@keyframes orbit {
+    0% {
+        transform: scale(0.95) rotate(0deg);
+    }
+    50%{
+        transform: scale(1) rotate(15deg);
+    }
+    100%{
+        transform: scale(0.95) rotate(30deg);
+    } 
 
+}
 /* ? Nav Bar */
 .barra {
     display: flex;
@@ -170,7 +165,7 @@ h4 {
 }
 /*! ********* Header End*********  */
 .main-container {
-    max-width: calc(51.98%);
+    max-width: calc(70%);
     /*Not sure*/
     margin: 0 auto;
     text-align: center;
@@ -212,6 +207,9 @@ h4 {
 }
 .btn-myWork:hover{
     cursor: pointer;
+    -webkit-box-shadow: 0px 0px 0px 6px #616161;
+    -moz-box-shadow: 0px 0px 0px 6px #616161;
+    box-shadow: 0px 0px 0px 6px #616161;
 }
 .btn-myWork {
     font-family: var(--main-font);
@@ -219,6 +217,7 @@ h4 {
     font-size: 3rem;
     padding: 2.15rem 2.4rem;
     border: none;
+    background-color: white;
     margin: 0 auto;
     width: auto;
     outline: none;
