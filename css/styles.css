@@ -223,3 +223,15 @@ h4 {
     outline: none;
     border-radius: 5rem;
 }
+/* ********* Proyects End*********  */
+.proyects{
+    padding-top: 20rem;
+    max-width: calc(60%);
+    margin: 0px auto;  
+}
+.about-me{
+    padding-top: 20rem;
+    max-width: calc(60%);
+    margin: 0px auto;
+}
+/*! ********* Proyects End*********  */
