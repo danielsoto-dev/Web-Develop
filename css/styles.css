@@ -247,16 +247,18 @@ svg{
 
 /*! ********* Button End*********  */
 
-/* ********* Proyects*********  */
+/* ********* Sections*********  */
 .proyects{
-    padding-top: 20rem;
+    padding-top: 30rem;
     margin: 0rem auto;  
 }
 .about-me{
-    padding-top: 20rem;
+    padding-top: 30rem;
     margin: 0rem auto;
 }
-/*! ********* Proyects End*********  */
+
+
+/*! ********* Sections End*********  */
 
 /* ********* SideBar*********  */
 .side-bar{
@@ -282,8 +284,6 @@ svg{
     text-decoration: none;
     text-decoration-skip-ink: auto;
     color: inherit;
-    position: relative;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
     cursor: pointer;
 }
 /*? Cambiar tamaño o agregar otro efecto de hover*/
@@ -300,36 +300,69 @@ svg{
 }
 /*! ********* End SideBar*********  */
 /* ********* About Me *********  */
-
-.personal-image{
-    height: 32.8rem;
-}
+/*? Text*/
 .title{
     padding-bottom: 0.5rem;
+    position: relative;
 }
 
-.grid-container{
-    gap: 3rem;
-    grid-template-columns: repeat(3, 1fr);
-    place-items:center;
+.title::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0.3rem;
+    bottom: 1.2rem;
+    left: 75%;
+    right: 0px;     
+    z-index: -1;
+    background-color:var(--grey-color);
 }
+.title::before{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0.3rem;
+    bottom: 1.2rem;
+    left: 0px;
+    right: 75%;     
+    z-index: -1;
+    background-color:var(--grey-color);
+}
+
 .text-box{
     font-family: var(--secondary-font);
     grid-column-start: 1;
     grid-column-end: 3;
     max-width: 79rem;
+    position: relative;
+}
+.text-box::before{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0.3rem;
+    bottom:-3.875rem;
+    left: 0px;
+    right: 75%;     
+    z-index: -1;
+    background-color:var(--grey-color);
 }
 .about-me-text{
     font-family: var(--secondary-font);
     font-size: var(--p-size);
 }
 .about-me-text span{
-    color: #0038FF;
+    color: #006eff;
 }
-.personal-image{
-    border: 3px solid black;
- 
+/*? Content Display*/
+.grid-container{
+    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    place-items:center;
 }
+
+
+/*? Skills Table*/
 .skills{
     padding-top: 1rem;
     max-width: calc(77%);
@@ -338,16 +371,25 @@ svg{
 }
 .skill-title{
     font-size: var(--p-size);
+    font-weight: 600;
 }
-/* .my-picture::after{
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top:0rem;
-    left: 0rem;
-    z-index: -1;
-    
-} */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.skills li{
+    list-style: none;
+    margin: 1rem 0rem;
+    font-size: 20px;
+}
+
+/*? Image*/
+.personal-image{
+    height: 32.8rem;
+}
+.personal-image{
+    border: 3px solid black;
+ 
+}
 /*! ********* About Me End*********  */
