@@ -3,6 +3,8 @@
     --main-font: 'Expletus Sans', cursive;
     --secondary-font:  'Open Sans', sans-serif;
     --grey-color: #161616;
+    --title-size: 3.4rem;
+    --p-size: 2.675rem;
 }
 /*! ********* Variables End *********  */
 /* ********* Globals *********  */
@@ -32,6 +34,7 @@ h2,
 h3,
 h4 {
     margin: 0;
+    font-family: var(--main-font)  !important;
 }
 .img{
     width: 100%;
@@ -39,7 +42,9 @@ h4 {
     margin-left: auto;
     margin-right: auto;
 }
-
+h1{
+    font-size: var(--title-size);
+}
 svg{
     width: 100%;
     height: 100%;
@@ -178,7 +183,7 @@ svg{
 .nav-bar a:focus:after,
 .nav-bar a:hover {
     color: var(--grey-color);
-    font-size: 3.4rem;
+    font-size: var(--title-size);
 }
 /*! ********* Header End*********  */
 
@@ -309,13 +314,14 @@ svg{
     place-items:center;
 }
 .text-box{
+    font-family: var(--secondary-font);
     grid-column-start: 1;
     grid-column-end: 3;
     max-width: 79rem;
 }
 .about-me-text{
     font-family: var(--secondary-font);
-    font-size: 2.675rem;
+    font-size: var(--p-size);
 }
 .about-me-text span{
     color: #0038FF;
@@ -323,6 +329,15 @@ svg{
 .personal-image{
     border: 3px solid black;
  
+}
+.skills{
+    padding-top: 1rem;
+    max-width: calc(77%);
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.skill-title{
+    font-size: var(--p-size);
 }
 /* .my-picture::after{
     content: "";
