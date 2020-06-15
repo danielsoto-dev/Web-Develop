@@ -72,7 +72,7 @@ svg{
 }
 /*! ********* Reusable End*********  */
 
-.box{
+.bg-box{
     background-color:  var(--grey-color);
     position: absolute;
     top: 6.4rem;
@@ -301,12 +301,12 @@ svg{
 /*! ********* End SideBar*********  */
 /* ********* About Me *********  */
 /*? Text*/
-.title{
+.about-me-title{
     padding-bottom: 0.5rem;
     position: relative;
 }
 
-.title::after{
+.about-me-title::after{
     content: "";
     display: block;
     position: absolute;
@@ -317,7 +317,7 @@ svg{
     z-index: -1;
     background-color:var(--grey-color);
 }
-.title::before{
+.about-me-title::before{
     content: "";
     display: block;
     position: absolute;
@@ -355,7 +355,7 @@ svg{
     color: #006eff;
 }
 /*? Content Display*/
-.grid-container{
+.grid-about-me{
     gap: 3rem;
     grid-template-columns: repeat(3, 1fr);
     place-items:center;
@@ -393,3 +393,20 @@ ul {
  
 }
 /*! ********* About Me End*********  */
+
+/*! ********* Projects*********  */
+
+.box{
+    display: block;
+    height: 100px;
+    width: 100px;
+    background-color: var(--grey-color);
+}
+
+.grid-projects{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 3rem;
+   
+}
+/* ********* Projects End*********  */
