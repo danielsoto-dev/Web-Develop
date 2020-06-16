@@ -161,7 +161,7 @@ svg{
     font-size: 3.3rem;
     color:  var(--grey-color);
     position: relative;
-    transition: all 0.4s ease;
+    transition: 250ms font-size ease-out;
 }
 .nav-bar a::after {
     content: "";
@@ -174,17 +174,15 @@ svg{
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
-    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 
+    transition: 250ms width cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .nav-bar a:focus:after,
 .nav-bar a:hover:after {
     width: 100%;
   }
-.nav-bar a:focus:after,
-.nav-bar a:hover {
-    color: var(--grey-color);
+  .nav-bar a:hover {
     font-size: var(--title-size);
-}
+  }
 /*! ********* Header End*********  */
 
 /* ********* Main Content *********  */
@@ -226,11 +224,6 @@ svg{
 }
 /*! ********* End Main Content *********  */
 /* ********* Button *********  */
-.btn-myWork:focus,
-.btn-myWork:hover{
-    border: 3px solid var(--grey-color);
-    cursor: pointer;
-}
 .btn-myWork {
     font-family: var(--main-font);
     font-weight: 600;
@@ -243,7 +236,15 @@ svg{
     outline: none;
     border-radius: 5rem;
     border: 3px solid white;
+    transition: 250ms border ease-in, 200ms font-size ease-in ;
 }
+.btn-myWork:focus,
+.btn-myWork:hover{
+    font-size: 3.1rem;
+    border: 3px solid var(--grey-color);
+    cursor: pointer;
+}
+
 
 /*! ********* Button End*********  */
 
@@ -343,7 +344,7 @@ svg{
     height: 0.3rem;
     bottom:-3.875rem;
     left: 0px;
-    right: 75%;     
+    right: 0px;     
     z-index: -1;
     background-color:var(--grey-color);
 }
@@ -396,17 +397,43 @@ ul {
 
 /*! ********* Projects*********  */
 
-.box{
-    display: block;
-    height: 100px;
-    width: 100px;
-    background-color: var(--grey-color);
+.proyect-title{
+    padding-bottom: 5rem;
 }
 
 .grid-projects{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 3rem;
-   
+    max-width: 100rem;
+    margin: 0 auto;
 }
+.card p{
+    margin: 0px;
+    padding: 0px;
+}
+.card .card-title{
+    font-size: 2rem;
+
+}
+.image-card{
+    background-image: url("images/photo.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.card{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 20px;
+    height: 32rem;
+    width: 30.4rem;
+    background-color: var(--grey-color);
+}
+
 /* ********* Projects End*********  */
