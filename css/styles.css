@@ -403,7 +403,7 @@ ul {
 
 .grid-projects{
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 3rem;
     max-width: 100rem;
     margin: 0 auto;
@@ -414,7 +414,6 @@ ul {
 }
 .card .card-title{
     font-size: 2rem;
- 
 
 }
 .card-description{
@@ -445,3 +444,16 @@ ul {
 }
 
 /* ********* Projects End*********  */
+
+/* ********* Footer*********  */
+.contact-me-title{
+    font-size: 4rem;
+}
+.contact-me{
+    padding-top: 15rem;
+}
+.footer{
+    background-color: var(--grey-color);
+    height: 15rem;
+}
+/* ********* Footer End*********  */
