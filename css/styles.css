@@ -1,11 +1,13 @@
 /* ********* Variables *********  */
-:root{
+:root {
     --main-font: 'Expletus Sans', cursive;
-    --secondary-font:  'Open Sans', sans-serif;
+    --secondary-font: 'Open Sans', sans-serif;
     --grey-color: #161616;
+    --links--color: #006eff;
     --title-size: 3.4rem;
     --p-size: 2.675rem;
 }
+
 /*! ********* Variables End *********  */
 /* ********* Globals *********  */
 html {
@@ -15,6 +17,7 @@ html {
     /*Rem ratio 10px --> 1rem*/
     color: var(--grey-color);
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -24,7 +27,7 @@ html {
 }
 
 body {
-    font-family:var(--main-font);
+    font-family: var(--main-font);
     /*font-family: 'Expletus Sans', cursive;*/
     font-size: 1.6rem;
 }
@@ -34,24 +37,38 @@ h2,
 h3,
 h4 {
     margin: 0;
-    font-family: var(--main-font)  !important;
+    font-family: var(--main-font) !important;
 }
-.img{
+
+.img {
     width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-h1{
+
+h1 {
     font-size: var(--title-size);
 }
-svg{
+
+svg {
     width: 100%;
     height: 100%;
     fill: currentcolor;
     vertical-align: middle;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/*! Mejorar*/
+p{
+    line-height: 3.5rem;
+}
+section{
+    padding: 15rem 0rem;
+}
 /*! ********* Globals End*********  */
 
 /* ********* Reusable *********  */
@@ -70,10 +87,11 @@ svg{
 .d-grid {
     display: grid;
 }
+
 /*! ********* Reusable End*********  */
 
-.bg-box{
-    background-color:  var(--grey-color);
+.bg-box {
+    background-color: var(--grey-color);
     position: absolute;
     top: 6.4rem;
     bottom: 6.4rem;
@@ -122,14 +140,17 @@ svg{
     0% {
         transform: scale(0.95) rotate(0deg);
     }
-    50%{
+
+    50% {
         transform: scale(1) rotate(15deg);
     }
-    100%{
+
+    100% {
         transform: scale(0.95) rotate(30deg);
-    } 
+    }
 
 }
+
 /* ? Nav Bar */
 .barra {
     display: flex;
@@ -159,10 +180,11 @@ svg{
     text-decoration: none;
     font-weight: bold;
     font-size: 3.3rem;
-    color:  var(--grey-color);
+    color: var(--grey-color);
     position: relative;
     transition: 250ms font-size ease-out;
 }
+
 .nav-bar a::after {
     content: "";
     position: absolute;
@@ -176,13 +198,16 @@ svg{
     transform: translateX(-50%);
     transition: 250ms width cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
 .nav-bar a:focus:after,
 .nav-bar a:hover:after {
     width: 100%;
-  }
-  .nav-bar a:hover {
+}
+
+.nav-bar a:hover {
     font-size: var(--title-size);
-  }
+}
+
 /*! ********* Header End*********  */
 
 /* ********* Main Content *********  */
@@ -190,6 +215,7 @@ svg{
     max-width: calc(70%);
     /*Not sure*/
     margin: 0 auto;
+    padding-bottom: 15rem;
 }
 
 .main-content {
@@ -201,14 +227,15 @@ svg{
     margin: 0 auto;
     height: 49rem;
     align-items: center;
-
 }
-.main-text-bar{
+
+.main-text-bar {
     justify-content: space-evenly;
     align-self: center;
     width: 100%;
 }
-.main-content{
+
+.main-content {
     font-size: 8rem;
 }
 
@@ -216,12 +243,14 @@ svg{
     color: white;
 }
 
-.brackets-svg{
+.brackets-svg {
     max-width: 13rem;
 }
-.arrow-svg{
+
+.arrow-svg {
     max-width: 90rem;
 }
+
 /*! ********* End Main Content *********  */
 /* ********* Button *********  */
 .btn-myWork {
@@ -236,10 +265,12 @@ svg{
     outline: none;
     border-radius: 5rem;
     border: 3px solid white;
-    transition: 250ms border ease-in, 200ms font-size ease-in ;
+    transition: 250ms border ease-in, 200ms font-size ease-in;
+    max-height: 8.35rem;
 }
+
 .btn-myWork:focus,
-.btn-myWork:hover{
+.btn-myWork:hover {
     font-size: 3.1rem;
     border: 3px solid var(--grey-color);
     cursor: pointer;
@@ -249,12 +280,11 @@ svg{
 /*! ********* Button End*********  */
 
 /* ********* Sections*********  */
-.proyects{
-    padding-top: 30rem;
-    margin: 0rem auto;  
+.proyects {
+    margin: 0rem auto;
 }
-.about-me{
-    padding-top: 30rem;
+
+.about-me {
     margin: 0rem auto;
 }
 
@@ -262,7 +292,7 @@ svg{
 /*! ********* Sections End*********  */
 
 /* ********* SideBar*********  */
-.side-bar{
+.side-bar {
     width: 4rem;
     position: fixed;
     bottom: 0rem;
@@ -270,7 +300,8 @@ svg{
     z-index: 0;
     color: rgb(168, 178, 209);
 }
-.side-list{
+
+.side-list {
     flex-direction: column;
     -webkit-box-align: center;
     align-items: center;
@@ -287,151 +318,193 @@ svg{
     color: inherit;
     cursor: pointer;
 }
+
 /*? Cambiar tamaño o agregar otro efecto de hover*/
-.side-bar-elem:hover{
+.side-bar-elem:hover {
     transform: translateY(-0.5rem);
 }
-.side-bar::after{
+
+.side-bar::after {
     content: "";
     display: block;
     width: 0.3rem;
     height: 9rem;
-    background-color:var(--grey-color);
+    background-color: var(--grey-color);
     margin: 0rem auto;
 }
+
 /*! ********* End SideBar*********  */
 /* ********* About Me *********  */
 /*? Text*/
-.about-me-title{
+.about-me-title {
     padding-bottom: 0.5rem;
     position: relative;
 }
 
-.about-me-title::after{
+.about-me-title::after {
     content: "";
     display: block;
     position: absolute;
     height: 0.3rem;
     bottom: 1.2rem;
     left: 75%;
-    right: 0px;     
+    right: 0px;
     z-index: -1;
-    background-color:var(--grey-color);
+    background-color: var(--grey-color);
 }
-.about-me-title::before{
+
+.about-me-title::before {
     content: "";
     display: block;
     position: absolute;
     height: 0.3rem;
     bottom: 1.2rem;
     left: 0px;
-    right: 75%;     
+    right: 75%;
     z-index: -1;
-    background-color:var(--grey-color);
+    background-color: var(--grey-color);
 }
 
-.text-box{
+.text-box {
     font-family: var(--secondary-font);
     grid-column-start: 1;
     grid-column-end: 3;
     max-width: 79rem;
     position: relative;
 }
-.text-box::before{
+
+.text-box::before {
     content: "";
     display: block;
     position: absolute;
     height: 0.3rem;
-    bottom:-3.875rem;
+    bottom: -3.875rem;
     left: 0px;
-    right: 0px;     
+    right: 0px;
     z-index: -1;
-    background-color:var(--grey-color);
+    background-color: var(--grey-color);
 }
-.about-me-text{
+
+.about-me-text {
     font-family: var(--secondary-font);
     font-size: var(--p-size);
 }
-.about-me-text span{
-    color: #006eff;
+
+
+span>a {
+    color: var(--links--color);
+    position: relative;
 }
+
+span>a::after {
+    content: "";
+    position: absolute;
+    height: 0.2rem;
+    background-color: var(--links--color);
+    width: 0px;
+    left: 0px;
+    bottom: -0.2rem;
+    transition: 250ms width cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+span>a:focus:after,
+span>a:hover:after {
+    width: 100%;
+  }
+
 /*? Content Display*/
-.grid-about-me{
+.grid-about-me {
     gap: 3rem;
     grid-template-columns: repeat(3, 1fr);
-    place-items:center;
+    place-items: center;
 }
 
 
 /*? Skills Table*/
-.skills{
+.skills {
     padding-top: 1rem;
     max-width: calc(77%);
     margin: 0 auto;
     justify-content: space-between;
 }
-.skill-title{
+
+.skill-title {
     font-size: var(--p-size);
     font-weight: 600;
 }
+
+.skill-title:hover {
+    color: var(--links--color);
+}
+
+.skill-title:hover + ul .skill-element{
+    padding-left: 0.5rem;
+}
+
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-.skills li{
+
+.skill-element {
     list-style: none;
     margin: 1rem 0rem;
     font-size: 20px;
+    transition: 299ms  padding-left ease-in;
 }
 
 /*? Image*/
-.personal-image{
+.personal-image {
     height: 32.8rem;
 }
-.personal-image{
+
+.personal-image {
     border: 3px solid black;
- 
+
 }
+
 /*! ********* About Me End*********  */
 
 /*! ********* Projects*********  */
 
-.proyect-title{
+.proyect-title {
     padding-bottom: 5rem;
 }
 
-.grid-projects{
+.grid-projects {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 3rem;
     max-width: 100rem;
     margin: 0 auto;
 }
-.card p{
+
+.card p {
     margin: 0px;
     padding: 0px;
 }
-.card .card-title{
+
+.card .card-title {
     font-size: 2rem;
 
 }
-.card-description{
-}
-.image-card{
+
+.card-description {}
+
+.image-card {
     position: absolute;
     top: 0px;
     height: 100px;
-    width:100%;
-    background-image:url('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg');
-    background-size:cover;
-    background-repeat:no-repeat;
+    width: 100%;
+    background-image: url('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 
 }
 
-.card{
+.card {
     display: flex;
-    overflow:hidden;
+    overflow: hidden;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -446,14 +519,17 @@ ul {
 /* ********* Projects End*********  */
 
 /* ********* Footer*********  */
-.contact-me-title{
+.contact-me-title {
     font-size: 4rem;
 }
-.contact-me{
+
+.contact-me {
     padding-top: 15rem;
 }
-.footer{
+
+.footer {
     background-color: var(--grey-color);
-    height: 15rem;
+    height: 10rem;
 }
+
 /* ********* Footer End*********  */
