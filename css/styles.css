@@ -538,11 +538,11 @@ ul {
 .contact-me {
     font-family: var(--secondary-font);
     padding-top: 15rem;
-    font-size: var(--p-size);
 }
 .contact-text{
     max-width: 65%;
     margin: 0 auto;
+    font-size: var(--p-size);
 }
 .footer {
     position: relative;
