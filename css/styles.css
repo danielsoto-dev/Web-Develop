@@ -317,11 +317,18 @@ section{
     text-decoration-skip-ink: auto;
     color: inherit;
     cursor: pointer;
+    transition: 100ms transform ease-in-out;
 }
 
 /*? Cambiar tamaño o agregar otro efecto de hover*/
 .side-bar-elem:hover {
     transform: translateY(-0.5rem);
+}
+.svg-path{
+    transition: 100ms fill ease-in-out;
+}
+.side-bar-elem:hover .svg-path{
+    fill: var(--links--color);
 }
 
 .side-bar::after {
@@ -434,6 +441,7 @@ span>a:hover:after {
 
 .skill-title:hover {
     color: var(--links--color);
+    transition: 200ms color ease-in;
 }
 
 .skill-title:hover + ul .skill-element{
@@ -450,7 +458,7 @@ ul {
     list-style: none;
     margin: 1rem 0rem;
     font-size: 20px;
-    transition: 299ms  padding-left ease-in;
+    transition: 200ms padding-left ease-in;
 }
 
 /*? Image*/
@@ -459,8 +467,11 @@ ul {
 }
 
 .personal-image {
-    border: 3px solid black;
-
+    outline: 0.3rem solid black;
+    transition: 150ms outline-offset ease-in;
+}
+.personal-image:hover {
+   outline-offset:  0.6rem;
 }
 
 /*! ********* About Me End*********  */
@@ -489,7 +500,9 @@ ul {
 
 }
 
-.card-description {}
+.card-description {
+    margin-bottom: 3rem;
+}
 
 .image-card {
     position: absolute;
@@ -506,8 +519,7 @@ ul {
     display: flex;
     overflow: hidden;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: end;
     color: white;
     border-radius: 20px;
     height: 32rem;
