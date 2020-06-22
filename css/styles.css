@@ -543,7 +543,9 @@ ul {
     font-size: var(--p-size);
 }
 .laptop-illustration{
-    margin: 0px auto;
+    display: block;
+    padding-top: 2rem;
+    margin: 0 auto;
 }
 .footer {
     position: relative;
