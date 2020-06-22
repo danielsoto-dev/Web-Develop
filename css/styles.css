@@ -475,9 +475,11 @@ ul {
 /*! ********* About Me End*********  */
 
 /*! ********* Projects*********  */
-
+.proyects{
+    padding-top: 12rem;
+}
 .proyect-title {
-    padding-bottom: 5rem;
+    padding-bottom: 10rem;
 }
 
 .grid-projects {
@@ -544,13 +546,14 @@ ul {
 
 .contact-me {
     font-family: var(--secondary-font);
-    padding-top: 15rem;
     padding-bottom: 0rem;
+    padding-top: 14rem;
 }
 .contact-text{
     max-width: 65%;
     margin: 0 auto;
     font-size: var(--p-size);
+    text-align: center;
 }
 .laptop-illustration{
     display: block;
