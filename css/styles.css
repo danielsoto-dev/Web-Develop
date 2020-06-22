@@ -545,6 +545,7 @@ ul {
 .contact-me {
     font-family: var(--secondary-font);
     padding-top: 15rem;
+    padding-bottom: 0rem;
 }
 .contact-text{
     max-width: 65%;
