@@ -27,6 +27,8 @@ html {
 }
 
 body {
+    padding: 0;
+    margin: 0;
     font-family: var(--main-font);
     /*font-family: 'Expletus Sans', cursive;*/
     font-size: 1.6rem;
