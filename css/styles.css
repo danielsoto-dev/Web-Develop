@@ -27,8 +27,6 @@ html {
 }
 
 body {
-    padding: 0;
-    margin: 0;
     font-family: var(--main-font);
     /*font-family: 'Expletus Sans', cursive;*/
     font-size: 1.6rem;
@@ -485,8 +483,8 @@ ul {
 }
 
 .grid-projects {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 304px);
     gap: 3rem;
     max-width: 100rem;
     margin: 0 auto;
