@@ -60,13 +60,16 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
 /*! Mejorar*/
-p{
+p {
     line-height: 3.5rem;
 }
-section{
+
+section {
     padding: 15rem 0rem;
 }
+
 /*! ********* Globals End*********  */
 
 /* ********* Reusable *********  */
@@ -173,6 +176,7 @@ section{
     list-style: none;
 }
 
+
 .nav-bar a {
     font-family: var(--main-font);
     text-decoration: none;
@@ -210,8 +214,7 @@ section{
 
 /* ********* Main Content *********  */
 .main-container {
-    max-width: calc(70%);
-    /*Not sure*/
+    max-width: 133.4rem;
     margin: 0 auto;
     padding-bottom: 15rem;
 }
@@ -231,6 +234,8 @@ section{
     justify-content: space-evenly;
     align-self: center;
     width: 100%;
+    display: flex;
+    text-align: center;
 }
 
 .main-content {
@@ -243,6 +248,7 @@ section{
 
 .brackets-svg {
     max-width: 13rem;
+    
 }
 
 .arrow-svg {
@@ -281,9 +287,12 @@ section{
 .proyects {
     margin: 0rem auto;
 }
-
+.fix-border-gap{
+    margin-bottom: 5.5rem;
+}
 .about-me {
     margin: 0rem auto;
+   
 }
 
 
@@ -322,10 +331,12 @@ section{
 .side-bar-elem:hover {
     transform: translateY(-0.5rem);
 }
-.svg-path{
+
+.svg-path {
     transition: 100ms fill ease-in-out;
 }
-.side-bar-elem:hover .svg-path{
+
+.side-bar-elem:hover .svg-path {
     fill: var(--links--color);
 }
 
@@ -411,10 +422,11 @@ span>a::after {
     bottom: -0.2rem;
     transition: 250ms width cubic-bezier(0.645, 0.045, 0.355, 1);
 }
+
 span>a:focus:after,
 span>a:hover:after {
     width: 100%;
-  }
+}
 
 /*? Content Display*/
 .grid-about-me {
@@ -427,11 +439,13 @@ span>a:hover:after {
 /*? Skills Table*/
 .skills {
     padding-top: 1rem;
-    max-width: calc(77%);
+    max-width: 60.83rem;
+    flex-wrap: wrap;
     margin: 0 auto;
     justify-content: space-between;
 }
 
+/*TODO Media Query Add Padding bottom to the Skills  */
 .skill-title {
     font-size: var(--p-size);
     font-weight: 600;
@@ -442,7 +456,7 @@ span>a:hover:after {
     transition: 200ms color ease-in;
 }
 
-.skill-title:hover + ul .skill-element{
+.skill-title:hover+ul .skill-element {
     padding-left: 0.5rem;
 }
 
@@ -468,16 +482,18 @@ ul {
     outline: 0.3rem solid black;
     transition: 150ms outline-offset ease-in;
 }
+
 .personal-image:hover {
-   outline-offset:  0.6rem;
+    outline-offset: 0.6rem;
 }
 
 /*! ********* About Me End*********  */
 
 /*! ********* Projects*********  */
-.proyects{
+.proyects {
     padding-top: 12rem;
 }
+
 .proyect-title {
     padding-bottom: 10rem;
 }
@@ -527,15 +543,15 @@ ul {
     width: 30.4rem;
     background-color: var(--grey-color);
     position: relative;
-    transition: 200ms transform ease-in,  200ms box-shadow ease-in;
+    transition: 200ms transform ease-in, 200ms box-shadow ease-in;
 }
 
 
-.card:hover{
+.card:hover {
     transform: scale(1.01);
-    -webkit-box-shadow: 0px 0px 14px 5px rgba(22,22,22,0.45);
-    -moz-box-shadow: 0px 0px 14px 5px rgba(22,22,22,0.45);
-    box-shadow: 0px 0px 14px 5px rgba(22,22,22,0.45);
+    -webkit-box-shadow: 0px 0px 14px 5px rgba(22, 22, 22, 0.45);
+    -moz-box-shadow: 0px 0px 14px 5px rgba(22, 22, 22, 0.45);
+    box-shadow: 0px 0px 14px 5px rgba(22, 22, 22, 0.45);
 }
 
 /* ********* Projects End*********  */
@@ -544,22 +560,27 @@ ul {
 .contact-me-title {
     font-size: 4rem;
 }
+
 .contact-me {
     font-family: var(--secondary-font);
     padding-bottom: 0rem;
     padding-top: 14rem;
 }
-.contact-text{
-    max-width: 65%;
+
+.contact-text {
+    max-width: 83rem;
     margin: 0 auto;
     font-size: var(--p-size);
     text-align: center;
+    padding: 0rem 5rem;
 }
-.laptop-illustration{
+
+.laptop-illustration {
     display: block;
     padding-top: 2rem;
     margin: 0 auto;
 }
+
 .footer {
     position: relative;
     background-color: var(--grey-color);
@@ -568,3 +589,5 @@ ul {
 }
 
 /* ********* Footer End*********  */
+
+/** °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°  MEDIA QUERIES  °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°**/
